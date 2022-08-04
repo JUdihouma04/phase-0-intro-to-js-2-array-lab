@@ -6,27 +6,34 @@ function destructivelyAppendCat(name) {
 }
 destructivelyAppendCat("Ralph");
 
-function destructivelyPreependCat(name) {
+function destructivelyPrependCat(name) {
   return cats.unshift(name);
 }
 destructivelyPrependCat("Bob");
 
-function destructivelyRemovesLastCat() {
+function destructivelyRemoveLastCat() {
   return cats.pop();
 }
-destructivelyRemovesLastCat();
+destructivelyRemoveLastCat();
 
-function destructivelyRemovesFirstCat() {
+function destructivelyRemoveFirstCat() {
   return cats.shift();
 }
-destructivelyRemovesFirstCat();
+destructivelyRemoveFirstCat();
 
 function appendCat(name) {
   return [...cats, name];
 }
 appendCat("Broom");
 
-function PrependCat(name) {
+function prependCat(name) {
   return [name, ...cats];
 }
 PrependCat("Arnold");
+
+function removeLastCat() {
+  return cats.slice(0, -1);
+}
+function removeFirstCat() {
+  return cats.slice(1);
+}
